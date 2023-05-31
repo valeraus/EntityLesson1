@@ -16,10 +16,11 @@ namespace Task2
      */
     internal class Program
     {
+        // Scaffold-DbContext 'Server=localhost\SQLEXPRESS;Database=Userbase;Trusted_Connection=True;' Microsoft.EntityFrameworkCore.SqlServer
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
-            //// Создание экземпляра контекста базы данных
+            // Создание экземпляра контекста базы данных
             //using (var database = new MyDatabaseContext())
             //{
             //    // Очистка таблицы Users
@@ -32,7 +33,6 @@ namespace Task2
 
             using (var database = new MyDatabaseContext())
             {
-                // Поиск и вывод индексов пользователей по имени
                 string[] namesToFind = { "User1", "User5", "User0", "User7" };
 
                 foreach (var name in namesToFind)
